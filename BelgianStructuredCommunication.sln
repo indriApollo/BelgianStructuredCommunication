@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelgianStructuredCommunication", "Lib\BelgianStructuredCommunication.csproj", "{7583B461-0015-4A25-AFA1-9B68E2AA691F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{AFD0305E-5484-4D17-8D00-183B8CACE9E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7583B461-0015-4A25-AFA1-9B68E2AA691F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7583B461-0015-4A25-AFA1-9B68E2AA691F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7583B461-0015-4A25-AFA1-9B68E2AA691F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7583B461-0015-4A25-AFA1-9B68E2AA691F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFD0305E-5484-4D17-8D00-183B8CACE9E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFD0305E-5484-4D17-8D00-183B8CACE9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFD0305E-5484-4D17-8D00-183B8CACE9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFD0305E-5484-4D17-8D00-183B8CACE9E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
