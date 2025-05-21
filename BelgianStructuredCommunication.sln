@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelgianStructuredCommunicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{AFD0305E-5484-4D17-8D00-183B8CACE9E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "Examples\Examples.csproj", "{3E888CFA-4C53-4517-ACBF-A7A028DF580D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{AFD0305E-5484-4D17-8D00-183B8CACE9E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFD0305E-5484-4D17-8D00-183B8CACE9E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFD0305E-5484-4D17-8D00-183B8CACE9E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E888CFA-4C53-4517-ACBF-A7A028DF580D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E888CFA-4C53-4517-ACBF-A7A028DF580D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E888CFA-4C53-4517-ACBF-A7A028DF580D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E888CFA-4C53-4517-ACBF-A7A028DF580D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

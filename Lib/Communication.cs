@@ -14,6 +14,12 @@ public partial class Communication : IParsable<Communication>
     {
     }
 
+    /// <summary>
+    /// Create a new <see cref="Communication"/>
+    /// </summary>
+    /// <param name="digits">The 10 digits</param>
+    /// <param name="checksum">Optional. Will be computed if omitted</param>
+    /// <exception cref="ArgumentException"> digits must be 10 characters</exception>
     public Communication(string digits, string? checksum = null)
     {
         if (digits.Length != 10)
@@ -29,6 +35,15 @@ public partial class Communication : IParsable<Communication>
         ValidChecksum = CheckSum == computedCheckSum;
     }
 
+    /// <summary>
+    /// Parse a string and return a <see cref="Communication"/>
+    /// </summary>
+    /// <param name="s">The source string to parse</param>
+    /// <param name="provider">Required by <see cref="IParsable{TSelf}"/> but otherwise unused</param>
+    /// <returns>the parsed <see cref="Communication"/></returns>
+    /// <exception cref="FormatException"> The source string isn't formatted as expected</exception>
+    /// <exception cref="InvalidChecksumException">The source string format is valid, but the checksum is invalid</exception>
+    /// <exception cref="ArgumentNullException">The source string can't be null</exception>
     public static Communication Parse(string s, IFormatProvider? provider = null)
     {
         if (!TryParse(s, provider, out var result))
@@ -39,12 +54,22 @@ public partial class Communication : IParsable<Communication>
         
         return result;
     }
-
+    
     public static bool TryParse([NotNullWhen(true)] string? s, [MaybeNullWhen(false)] out Communication result)
     {
         return TryParse(s, null, out result);
     }
 
+    /// <summary>
+    /// Parse a string and return a <see cref="Communication"/>.
+    /// The parsing succeeds as long as the source string is well formatted.
+    /// You should check <see cref="ValidChecksum"/> to make sure the parsed value is valid.
+    /// </summary>
+    /// <param name="s">The source string to parse</param>
+    /// <param name="provider">Required by <see cref="IParsable{TSelf}"/> but otherwise unused</param>
+    /// <param name="result">The parsed <see cref="Communication"/>, or null when parsing failed</param>
+    /// <returns>true if s was converted successfully; otherwise, false</returns>
+    /// <exception cref="ArgumentNullException">The source string can't be null</exception>
     public static bool TryParse([NotNullWhen(true)] string? s, IFormatProvider? provider,
         [MaybeNullWhen(false)] out Communication result)
     {
