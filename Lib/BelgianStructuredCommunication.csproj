@@ -4,6 +4,23 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>IndriApollo.BelgianStructuredCommunication</RootNamespace>
+        <IsPackable>true</IsPackable>
+        <Version>1.0.1</Version>
     </PropertyGroup>
+    
+    <PropertyGroup>
+        <PackageId>IndriApollo.BelgianStructuredCommunication</PackageId>
+        <Authors>Raphaël Leroux (indriApollo)</Authors>
+        <PackageTags>Banking;Invoicing</PackageTags>
+        <Description>A library to create and parse belgian structured communications.</Description>
+        <PackageProjectUrl>https://github.com/indriApollo/BelgianStructuredCommunication</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
 
 </Project>

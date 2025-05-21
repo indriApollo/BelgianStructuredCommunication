@@ -1,4 +1,4 @@
-using BelgianStructuredCommunication;
+using IndriApollo.BelgianStructuredCommunication;
 using Xunit;
 
 namespace Tests;

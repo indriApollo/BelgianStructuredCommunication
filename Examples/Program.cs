@@ -1,4 +1,4 @@
-﻿using BelgianStructuredCommunication;
+﻿using IndriApollo.BelgianStructuredCommunication;
 
 var a = new Communication(0123456789);
 Console.WriteLine(a.ToString()); // +++012/3456/78939+++

@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace BelgianStructuredCommunication;
+namespace IndriApollo.BelgianStructuredCommunication;
 
 public partial class Communication : IParsable<Communication>
 {
