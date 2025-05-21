@@ -17,6 +17,8 @@
         <PackageProjectUrl>https://github.com/indriApollo/BelgianStructuredCommunication</PackageProjectUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/indriApollo/BelgianStructuredCommunication</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
