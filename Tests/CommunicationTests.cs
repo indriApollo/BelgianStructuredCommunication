@@ -60,7 +60,7 @@ public class CommunicationTests
     }
 
     [Fact]
-    public void GivenBadChecksum_WhenTryParse_ThenSetInvalidChecksumTrue()
+    public void GivenBadChecksum_WhenTryParse_ThenSetValidChecksumFalse()
     {
         const string badChecksum = "+++333/5331/03799+++";
         
