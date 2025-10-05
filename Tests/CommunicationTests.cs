@@ -6,15 +6,17 @@ namespace Tests;
 public class CommunicationTests
 {
     [Theory]
-    [InlineData("+++ 085 / 1927 / 54115 +++")]
-    [InlineData("+++085/1927/54115+++")]
-    [InlineData("085192754115")]
-    public void GivenWellFormattedCommunication_WhenParse_ThenSuccess(string communicationStr)
+    [InlineData("+++ 085 / 1927 / 54115 +++", 851927541, 15)]
+    [InlineData("+++085/1927/54115+++", 851927541, 15)]
+    [InlineData("085192754115", 851927541, 15)]
+    [InlineData("999999999948", 9999999999, 48)]
+    public void GivenWellFormattedCommunication_WhenParse_ThenSuccess(string communicationStr,
+        ulong expectedDigits, byte expectedCheckSum)
     {
         var communication = Communication.Parse(communicationStr);
         
-        Assert.Equal((uint)851927541, communication.Digits);
-        Assert.Equal(15, communication.CheckSum);
+        Assert.Equal(expectedDigits, communication.Digits);
+        Assert.Equal(expectedCheckSum, communication.CheckSum);
         Assert.True(communication.ValidChecksum);
     }
     

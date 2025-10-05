@@ -6,11 +6,11 @@ namespace IndriApollo.BelgianStructuredCommunication;
 
 public partial class Communication : IParsable<Communication>
 {
-    public uint Digits { get; }
+    public ulong Digits { get; }
     public byte CheckSum { get; }
     public bool ValidChecksum { get; }
 
-    public Communication(uint digits) : this(digits.ToString("D10"))
+    public Communication(ulong digits) : this(digits.ToString("D10"))
     {
     }
 
@@ -25,7 +25,7 @@ public partial class Communication : IParsable<Communication>
         if (digits.Length != 10)
             throw new ArgumentException("Digits must be 10 characters", nameof(digits));
 
-        Digits = uint.Parse(digits, NumberStyles.None, CultureInfo.InvariantCulture);
+        Digits = ulong.Parse(digits, NumberStyles.None, CultureInfo.InvariantCulture);
 
         var computedCheckSum = ComputeCheckSum(Digits);
         CheckSum = checksum is not null
@@ -89,7 +89,7 @@ public partial class Communication : IParsable<Communication>
         return true;
     }
 
-    private static byte ComputeCheckSum(uint digits)
+    private static byte ComputeCheckSum(ulong digits)
     {
         return (byte)(digits % 97);
     }
@@ -104,5 +104,5 @@ public partial class Communication : IParsable<Communication>
     private static partial Regex CommunicationRegex();
 }
 
-public class InvalidChecksumException(byte expected, byte actual, uint digits)
+public class InvalidChecksumException(byte expected, byte actual, ulong digits)
     : Exception($"Expected {expected:D2} but got {actual:D2} for {digits:D10}");
